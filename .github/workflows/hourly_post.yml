@@ -1,0 +1,48 @@
+name: Hourly Korean Phrase Auto-Post
+
+on:
+  schedule:
+    - cron: "0 * * * *" # 매시 정각(UTC 기준) 실행 - 실제 실행 시각은 GitHub 부하에 따라 몇 분 지연될 수 있음
+  workflow_dispatch: {} # Actions 탭에서 수동 실행 가능
+
+permissions:
+  contents: write # 게시 상태(data/phrases.json)를 커밋하기 위해 필요
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run posting job
+        env:
+          HOMEPAGE_URL: ${{ secrets.HOMEPAGE_URL }}
+          ENABLE_TWITTER: ${{ secrets.ENABLE_TWITTER }}
+          ENABLE_THREADS: ${{ secrets.ENABLE_THREADS }}
+          ENABLE_LINE: ${{ secrets.ENABLE_LINE }}
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: python run_once.py
+
+      - name: Commit updated phrase database
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/phrases.json
+          git diff --cached --quiet || git commit -m "chore: update phrase publish status [skip ci]"
+          git push
