@@ -2,7 +2,7 @@ name: Hourly Korean Phrase Auto-Post
 
 on:
   schedule:
-    - cron: "0 * * * *" # 매시 정각(UTC 기준) 실행 - 실제 실행 시각은 GitHub 부하에 따라 몇 분 지연될 수 있음
+    - cron: "37 * * * *" # 매시 37분(UTC) 실행 - 정각은 스케줄 요청이 몰려 실행이 누락되는 일이 잦아 피한다
   workflow_dispatch: {} # Actions 탭에서 수동 실행 가능
 
 permissions:
@@ -44,5 +44,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/phrases.json
-          git diff --cached --quiet || git commit -m "chore: update phrase publish status [skip ci]"
+          if git diff --cached --quiet; then
+            echo "게시 상태에 변경이 없어 커밋을 생략합니다."
+            exit 0
+          fi
+          git commit -m "chore: update phrase publish status [skip ci]"
+          # 스케줄이 지연되면 오래된 커밋 위에서 실행될 수 있어, 푸시 전에 원격 커밋을 먼저 취합한다
+          git pull --rebase origin main
           git push
