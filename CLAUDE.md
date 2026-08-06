@@ -75,6 +75,10 @@
   예외는 비밀이 아닌 공개 URL(`LINE_ADD_URL`)의 기본값뿐이다.
 - **`HOMEPAGE_URL`이 비면 `https://example.com`이 그대로 게시된다.** `config.py`의 기본값이라
   아무 에러 없이 조용히 나간다. Actions Secrets에서 지우지 말 것.
+- **LINE 친구추가 링크(`LINE_ADD_URL`)와 LINE 브로드캐스트(`ENABLE_LINE`)는 완전히 별개다.**
+  전자는 모든 플랫폼의 모든 게시물 본문에 들어가는 텍스트 링크이고,
+  후자는 LINE 채널 친구에게 메시지를 발송하는 게시 플랫폼이다.
+  링크는 `ENABLE_LINE` 플래그와 무관하게 항상 렌더된다. 둘을 묶지 말 것.
 - **새 플랫폼 추가는 `platforms/base.py` 상속 + `platforms/__init__.py`의
   `get_enabled_posters()` 등록**만으로. `job.py`는 수정 불필요.
 - **워크플로가 매 실행마다 `main`에 커밋한다.** 파일을 추가하면 `README.md`·`.env.example`·
@@ -89,7 +93,7 @@ DB도 `npm install`도 필요 없다. 저장소 루트에서 실행한다.
 python -c "import json,models; d=json.load(open('data/phrases.json',encoding='utf-8')); [models.Phrase(**x) for x in d]; print('스키마 OK:', len(d), '건')"
 
 # 2) 렌더 확인 — 가장 긴 표현이 어떻게 나가는가
-python -c "import json,models,content; d=json.load(open('data/phrases.json',encoding='utf-8')); t=max((content.build_post_text_for_platform(models.Phrase(**x),'https://www.kstudy101.jp/',280) for x in d), key=len); print(t); print('--- len =',len(t))"
+python -c "import json,models,content,config; d=json.load(open('data/phrases.json',encoding='utf-8')); t=max((content.build_post_text_for_platform(models.Phrase(**x),'https://www.kstudy101.jp/',config.LINE_ADD_URL,280) for x in d), key=len); print(t); print('--- len =',len(t))"
 
 # 3) 무인증 드라이런 — 예외 없이 완주하는가 (인증 정보가 없으면 게시는 실패하며 종료코드 1이 정상)
 python run_once.py

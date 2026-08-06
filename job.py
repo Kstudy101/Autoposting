@@ -41,7 +41,9 @@ def run_posting_job() -> bool:
     any_success = False
     for poster in posters:
         try:
-            text = build_post_text_for_platform(phrase, config.HOMEPAGE_URL, poster.MAX_LENGTH)
+            text = build_post_text_for_platform(
+                phrase, config.HOMEPAGE_URL, config.LINE_ADD_URL, poster.MAX_LENGTH
+            )
             success = poster.post(text)
             any_success = any_success or success
         except Exception as e:

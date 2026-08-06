@@ -14,6 +14,8 @@ def _get_bool(name: str, default: bool = False) -> bool:
 
 # 공통 설정
 HOMEPAGE_URL = os.getenv("HOMEPAGE_URL", "https://example.com")
+# LINE 친구추가 링크. 비밀값이 아니므로 기본값을 코드에 두어 Secret 등록 없이도 동작한다.
+LINE_ADD_URL = os.getenv("LINE_ADD_URL", "https://lin.ee/8Rz047O")
 DATA_FILE = os.getenv("DATA_FILE", "data/phrases.json")
 LOG_FILE = os.getenv("LOG_FILE", "logs/app.log")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")

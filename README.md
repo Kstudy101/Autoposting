@@ -115,6 +115,7 @@ VPS 등에서 재부팅 후에도 계속 실행되게 하려면 systemd 서비�
   "katakana": "カタカナ 발음",
   "meaning": "일본어 뜻",
   "description": "일본어로 된 간단한 사용 상황 설명",
+  "nuance": "일본어로 된 한/일 뉘앙스 차이 한 줄",
   "is_published": false,
   "published_at": null
 }

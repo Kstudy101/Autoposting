@@ -11,6 +11,7 @@ class Phrase:
     katakana: str
     meaning: str
     description: str
+    nuance: str
     is_published: bool = False
     published_at: Optional[str] = None
 
