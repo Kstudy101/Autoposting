@@ -500,8 +500,8 @@
     "meaning": "推し",
     "description": "一番好きなメンバーや作品を指す言葉。ファン同士の会話で必須。",
     "nuance": "日本語の「推し」に対応する。漢字で最愛と書くと意味を掴みやすい。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-07T14:41:53.654082+00:00"
   },
   {
     "id": 43,
