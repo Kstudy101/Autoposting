@@ -320,8 +320,8 @@
     "meaning": "お持ち帰りで",
     "description": "店内かテイクアウトかを聞かれた時の返し。一言で通じる。",
     "nuance": "外来語より포장(包装)を使うのが一般的で、その方が自然に響く。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-10T18:12:13.514761+00:00"
   },
   {
     "id": 28,
