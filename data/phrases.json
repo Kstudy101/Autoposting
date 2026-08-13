@@ -332,8 +332,8 @@
     "meaning": "店内で食べます",
     "description": "店内利用を伝える時。飲み物なら마실게요に変えて使う。",
     "nuance": "日本語は「店内で」と場所だけ言うが、韓国語は動詞まで言い切るのが普通。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-13T05:20:10.977864+00:00"
   },
   {
     "id": 29,
