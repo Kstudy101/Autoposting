@@ -4,7 +4,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 from apscheduler.schedulers.blocking import BlockingScheduler
-from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.triggers.cron import CronTrigger
 
 import config
 from job import run_posting_job
@@ -32,18 +32,12 @@ def main() -> None:
     scheduler = BlockingScheduler(timezone="Asia/Tokyo")
     scheduler.add_job(
         run_posting_job,
-        trigger=IntervalTrigger(hours=config.POST_INTERVAL_HOURS),
-        id="hourly_korean_post",
+        trigger=CronTrigger(hour="18,21", minute=37, timezone="Asia/Tokyo"),
+        id="evening_korean_post",
         misfire_grace_time=300,
     )
 
-    # 시작하자마자 1회 즉시 실행 (그 다음부터 지정된 간격으로 반복)
-    try:
-        run_posting_job()
-    except Exception as e:
-        logger.error(f"初回実行でエラーが発生しました: {e}")
-
-    logger.info(f"{config.POST_INTERVAL_HOURS}時間ごとの自動投稿を開始します。(Ctrl+Cで終了)")
+    logger.info("18:37 / 21:37 JST の自動投稿を開始します。(Ctrl+Cで終了)")
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):

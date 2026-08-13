@@ -2,8 +2,8 @@ name: Twice-daily Korean Phrase Auto-Post
 
 on:
   schedule:
-    # 09:37 / 18:37 JST (UTC 00:37 / 09:37). 정각은 스케줄이 몰려 누락되기 쉬워 37분을 유지한다.
-    - cron: "37 0,9 * * *"
+    # 18:37 / 21:37 JST (UTC 09:37 / 12:37). SNS 이용이 많은 저녁 시간대. 정각은 스케줄이 몰려 누락되기 쉬워 37분을 유지한다.
+    - cron: "37 9,12 * * *"
   workflow_dispatch: {} # Actions 탭에서 수동 실행 가능
 
 permissions:

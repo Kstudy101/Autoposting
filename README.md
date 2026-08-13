@@ -7,7 +7,7 @@
 
 ```
 클로드/
-├── autoposting.py          # 로컬/서버에서 계속 실행하는 스케줄러 (APScheduler, 12시간마다)
+├── autoposting.py          # 로컬/서버에서 계속 실행하는 스케줄러 (APScheduler, 18:37 / 21:37 JST)
 ├── run_once.py              # 1회만 실행하는 스크립트 (GitHub Actions 등 stateless 환경용)
 ├── job.py                   # 표현 선택 → 포스팅 → 게시 상태 저장까지의 핵심 로직
 ├── models.py                # Phrase 데이터 모델
@@ -72,7 +72,7 @@ copy .env.example .env
 python autoposting.py
 ```
 
-실행 즉시 1회 포스팅 후, `POST_INTERVAL_HOURS`(기본 12시간, 하루 2회) 간격으로 계속 반복합니다.
+실행 즉시 포스팅하지 않고, 매일 18:37 / 21:37 JST에만 게시합니다.
 Ctrl+C로 종료할 수 있습니다. 로그는 콘솔과 `logs/app.log`에 함께 기록되며, 포스팅 실패 시에도
 에러만 로그로 남기고 다음 회차로 넘어갑니다 (다음 실행 시 같은 표현이 다시 선택되어 재시도됨).
 
@@ -88,7 +88,7 @@ VPS 등에서 재부팅 후에도 계속 실행되게 하려면 systemd 서비�
    - `HOMEPAGE_URL`, `ENABLE_TWITTER`, `ENABLE_THREADS`, `ENABLE_LINE`
    - `TWITTER_API_KEY`, `TWITTER_API_SECRET`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`
    - (사용 시) `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN`, `LINE_CHANNEL_ACCESS_TOKEN`
-3. `.github/workflows/hourly_post.yml`이 하루 2회(cron `37 0,9 * * *` = 09:37 / 18:37 JST) 자동 실행됩니다.
+3. `.github/workflows/hourly_post.yml`이 하루 2회(cron `37 9,12 * * *` = 18:37 / 21:37 JST) 자동 실행됩니다.
 4. 실행 후 `data/phrases.json`의 게시 상태 변경분을 워크플로우가 자동으로 커밋/푸시하여
    다음 실행에서도 중복 게시 없이 이어집니다.
 
