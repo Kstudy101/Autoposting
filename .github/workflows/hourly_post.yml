@@ -1,8 +1,9 @@
-name: Hourly Korean Phrase Auto-Post
+name: Twice-daily Korean Phrase Auto-Post
 
 on:
   schedule:
-    - cron: "37 * * * *" # 매시 37분(UTC) 실행 - 정각은 스케줄 요청이 몰려 실행이 누락되는 일이 잦아 피한다
+    # 09:37 / 18:37 JST (UTC 00:37 / 09:37). 정각은 스케줄이 몰려 누락되기 쉬워 37분을 유지한다.
+    - cron: "37 0,9 * * *"
   workflow_dispatch: {} # Actions 탭에서 수동 실행 가능
 
 permissions:

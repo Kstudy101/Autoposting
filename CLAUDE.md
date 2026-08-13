@@ -73,12 +73,13 @@
   `MAX_LENGTH`는 하드 캡이 아니라 안전망으로 둔 값이니, 길이를 논할 때 `len()` 값을 근거로 쓰지 말 것.
 - **API 키·토큰은 `.env`(및 GitHub Secrets)로만.** 코드 하드코딩 금지.
   예외는 비밀이 아닌 공개 URL(`LINE_ADD_URL`)의 기본값뿐이다.
-- **`HOMEPAGE_URL`이 비면 `https://example.com`이 그대로 게시된다.** `config.py`의 기본값이라
-  아무 에러 없이 조용히 나간다. Actions Secrets에서 지우지 말 것.
+- **X 게시 본문에 URL(`http://` / `https://`)을 넣지 않는다.** URL이 하나라도 있으면
+  `ContentCreateWithUrl`로 과금되어 일반 게시($0.015)의 약 13배($0.20)가 된다.
+  CTA는 `続きはプロフィールのリンクから`처럼 텍스트만 쓰고, 실제 URL은 프로필/고정글에 둔다.
+- **`HOMEPAGE_URL` / `LINE_ADD_URL`은 본문에 렌더하지 않는다.** `job.py`가 인자를 넘기지만
+  `content.py`가 의도적으로 버린다. 본문에 다시 넣지 말 것.
 - **LINE 친구추가 링크(`LINE_ADD_URL`)와 LINE 브로드캐스트(`ENABLE_LINE`)는 완전히 별개다.**
-  전자는 모든 플랫폼의 모든 게시물 본문에 들어가는 텍스트 링크이고,
-  후자는 LINE 채널 친구에게 메시지를 발송하는 게시 플랫폼이다.
-  링크는 `ENABLE_LINE` 플래그와 무관하게 항상 렌더된다. 둘을 묶지 말 것.
+  후자는 LINE 채널 친구에게 메시지를 발송하는 게시 플랫폼이다. 둘을 묶지 말 것.
 - **새 플랫폼 추가는 `platforms/base.py` 상속 + `platforms/__init__.py`의
   `get_enabled_posters()` 등록**만으로. `job.py`는 수정 불필요.
 - **워크플로가 매 실행마다 `main`에 커밋한다.** 파일을 추가하면 `README.md`·`.env.example`·

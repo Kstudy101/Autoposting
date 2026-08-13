@@ -19,7 +19,7 @@ LINE_ADD_URL = os.getenv("LINE_ADD_URL", "https://lin.ee/8Rz047O")
 DATA_FILE = os.getenv("DATA_FILE", "data/phrases.json")
 LOG_FILE = os.getenv("LOG_FILE", "logs/app.log")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-POST_INTERVAL_HOURS = int(os.getenv("POST_INTERVAL_HOURS", "1"))
+POST_INTERVAL_HOURS = int(os.getenv("POST_INTERVAL_HOURS", "12"))
 
 # 플랫폼 on/off
 ENABLE_TWITTER = _get_bool("ENABLE_TWITTER", True)

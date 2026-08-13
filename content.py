@@ -11,14 +11,15 @@ POST_TEMPLATE = """[今日の韓国語 🇰🇷 - {category}]
 💡 {description}
 🇰🇷→🇯🇵 {nuance}
 
-👉 もっと詳しくはこちら
-🔗 {homepage_url}
-📱 LINE友だち追加 → {line_add_url}
+続きはプロフィールのリンクから
 
 #韓国語 #リアル韓国語 #{category_tag}"""
 
 
 def build_post_text(phrase: Phrase, homepage_url: str, line_add_url: str) -> str:
+    # 본문에 URL을 넣으면 X API가 ContentCreateWithUrl($0.20)로 과금한다.
+    # 인자는 job.py 호환용으로 유지하고, 유도는 프로필 링크로만 한다.
+    _ = (homepage_url, line_add_url)
     return POST_TEMPLATE.format(
         category=phrase.category,
         korean=phrase.korean,
@@ -26,8 +27,6 @@ def build_post_text(phrase: Phrase, homepage_url: str, line_add_url: str) -> str
         meaning=phrase.meaning,
         description=phrase.description,
         nuance=phrase.nuance,
-        homepage_url=homepage_url,
-        line_add_url=line_add_url,
         category_tag=phrase.category_tag,
     )
 
@@ -37,7 +36,7 @@ def build_post_text_for_platform(
 ) -> str:
     """플랫폼별 글자수 제한에 맞춰 설명(description)과 뉘앙스(nuance)를 줄여서 반환한다.
 
-    2개 URL과 해시태그, 필수 정보(한국어/발음/의미)는 항상 유지하고,
+    해시태그와 필수 정보(한국어/발음/의미)는 항상 유지하고,
     초과분이 있을 때만 💡 설명을 먼저, 그래도 넘치면 🇰🇷→🇯🇵 뉘앙스를 점진적으로 축약한다.
 
     주의: max_length 비교는 len() 기준이라 X의 weighted length(한글·가나 2배, URL 23 고정)와

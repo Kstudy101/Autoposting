@@ -1,13 +1,13 @@
 # 韓国語 SNS 自動投稿ボット
 
-일본인을 대상으로 1시간마다 상황별 유용한 한국어 표현(한국어 문장 + カタカナ 발음 + 일본어 뜻 + 사용 설명)을
+일본인을 대상으로 하루 2회 상황별 유용한 한국어 표현(한국어 문장 + カタカナ 발음 + 일본어 뜻 + 사용 설명)을
 중복 없이 랜덤으로 SNS(X, Threads, LINE)에 자동 포스팅하면서 홈페이지 링크도 함께 홍보하는 프로그램입니다.
 
 ## 1. 프로젝트 구조
 
 ```
 클로드/
-├── autoposting.py          # 로컬/서버에서 계속 실행하는 스케줄러 (APScheduler, 1시간마다)
+├── autoposting.py          # 로컬/서버에서 계속 실행하는 스케줄러 (APScheduler, 12시간마다)
 ├── run_once.py              # 1회만 실행하는 스크립트 (GitHub Actions 등 stateless 환경용)
 ├── job.py                   # 표현 선택 → 포스팅 → 게시 상태 저장까지의 핵심 로직
 ├── models.py                # Phrase 데이터 모델
@@ -53,7 +53,7 @@ copy .env.example .env
 1. https://developer.twitter.com 에서 개발자 계정 및 앱 생성
 2. 앱 권한을 **Read and Write**로 설정 (트윗 작성에 필요)
 3. Consumer Key/Secret, Access Token/Secret 발급 → `.env`의 `TWITTER_*` 값에 입력
-4. 무료(Free) 티어 기준 월 1,500건 쓰기(write)가 가능하므로, 1시간 간격(월 약 720건)이면 충분합니다.
+4. 본문에 URL을 넣지 않는다. URL 포함 게시는 일반 게시보다 약 13배 과금된다. 하루 2회면 월 약 60건이다.
 
 ### Threads API
 1. https://developers.facebook.com/docs/threads 문서를 참고해 Meta 개발자 앱을 생성
@@ -72,7 +72,7 @@ copy .env.example .env
 python autoposting.py
 ```
 
-실행 즉시 1회 포스팅 후, `POST_INTERVAL_HOURS`(기본 1시간) 간격으로 계속 반복합니다.
+실행 즉시 1회 포스팅 후, `POST_INTERVAL_HOURS`(기본 12시간, 하루 2회) 간격으로 계속 반복합니다.
 Ctrl+C로 종료할 수 있습니다. 로그는 콘솔과 `logs/app.log`에 함께 기록되며, 포스팅 실패 시에도
 에러만 로그로 남기고 다음 회차로 넘어갑니다 (다음 실행 시 같은 표현이 다시 선택되어 재시도됨).
 
@@ -81,14 +81,14 @@ VPS 등에서 재부팅 후에도 계속 실행되게 하려면 systemd 서비�
 
 ## 5. 24시간 무료/저비용 실행 — GitHub Actions (추천)
 
-서버를 따로 띄우지 않고 **GitHub Actions의 스케줄 트리거**로 매시간 `run_once.py`를 실행하는 방식입니다.
+서버를 따로 띄우지 않고 **GitHub Actions의 스케줄 트리거**로 하루 2회 `run_once.py`를 실행하는 방식입니다.
 
 1. 이 프로젝트를 GitHub 저장소에 push
 2. 저장소 **Settings → Secrets and variables → Actions**에서 아래 값을 등록:
    - `HOMEPAGE_URL`, `ENABLE_TWITTER`, `ENABLE_THREADS`, `ENABLE_LINE`
    - `TWITTER_API_KEY`, `TWITTER_API_SECRET`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`
    - (사용 시) `THREADS_USER_ID`, `THREADS_ACCESS_TOKEN`, `LINE_CHANNEL_ACCESS_TOKEN`
-3. `.github/workflows/hourly_post.yml`이 매시 정각(cron `0 * * * *`)에 자동 실행됩니다.
+3. `.github/workflows/hourly_post.yml`이 하루 2회(cron `37 0,9 * * *` = 09:37 / 18:37 JST) 자동 실행됩니다.
 4. 실행 후 `data/phrases.json`의 게시 상태 변경분을 워크플로우가 자동으로 커밋/푸시하여
    다음 실행에서도 중복 게시 없이 이어집니다.
 
@@ -126,6 +126,6 @@ VPS 등에서 재부팅 후에도 계속 실행되게 하려면 systemd 서비�
 - **X 포스팅 실패**: 앱 권한이 Read/Write인지, 액세스 토큰이 앱 권한 변경 후 재발급된 것인지 확인
 - **Threads 포스팅 실패**: 액세스 토큰 만료 여부, `THREADS_USER_ID`가 Threads용 사용자 ID인지 확인
 - **길이 초과 에러**: `content.py`의 `build_post_text_for_platform()`이 플랫폼별 `MAX_LENGTH`에 맞춰
-  설명(💡) 부분을 자동으로 줄여주지만, URL이 매우 길 경우 여전히 초과할 수 있으니 짧은 URL 사용을 권장
+  설명(💡) 부분을 자동으로 줄여준다. X 본문에는 URL을 넣지 않는다(URL 포함 게시 과금 회피).
 - **GitHub Actions에서 커밋 실패**: 저장소 Settings → Actions → General → Workflow permissions를
   "Read and write permissions"로 설정해야 `git push`가 가능합니다.
