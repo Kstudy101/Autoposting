@@ -32,8 +32,8 @@
     "meaning": "ほんとに?",
     "description": "相手の話を受けて確認する相槌。友達同士なら一日に何度も出てくる。",
     "nuance": "日本語と違い疑いの色がなく、ちゃんと聞いてるよという合図として働く。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-16T13:51:18.078352+00:00"
   },
   {
     "id": 4,
