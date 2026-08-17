@@ -176,8 +176,8 @@
     "meaning": "なんでそれ聞くの",
     "description": "答えが分かりきった質問に返す一言。照れ隠しにもなる。",
     "nuance": "日本語なら「聞かないでよ」と濁す場面を、韓国語は理由を問う形で返す。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-17T10:58:56.437327+00:00"
   },
   {
     "id": 16,
