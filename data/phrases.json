@@ -8,8 +8,8 @@
     "meaning": "やばい、すごい",
     "description": "予想を超えた時に出る定番リアクション。良い驚きにも悪い驚きにも使える。",
     "nuance": "日本語の「やばい」に近いが、韓国では会話中に何度も繰り返すのが自然。",
-    "is_published": true,
-    "published_at": "2026-08-11T23:09:51.326674+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 2,
@@ -20,8 +20,8 @@
     "meaning": "えっ、うそでしょ",
     "description": "信じられない話を聞いた瞬間に反射で出る一言。SNSのコメントでも頻出。",
     "nuance": "「えっ」より衝撃が強い。대박が感嘆なら헐は絶句、と覚えると使い分けやすい。",
-    "is_published": true,
-    "published_at": "2026-08-16T10:44:01.135608+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 3,
@@ -32,8 +32,8 @@
     "meaning": "ほんとに?",
     "description": "相手の話を受けて確認する相槌。友達同士なら一日に何度も出てくる。",
     "nuance": "日本語と違い疑いの色がなく、ちゃんと聞いてるよという合図として働く。",
-    "is_published": true,
-    "published_at": "2026-08-16T13:51:18.078352+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 4,
@@ -44,8 +44,8 @@
     "meaning": "だよね、それな",
     "description": "相手の意見に強く同意する時。「まさにそれ」というニュアンス。",
     "nuance": "直訳は「だから」。会話では同意の相槌になり、日本語の「それな」に当たる。",
-    "is_published": true,
-    "published_at": "2026-08-15T13:48:51.863478+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 5,
@@ -56,8 +56,8 @@
     "meaning": "そうそう",
     "description": "相手の話に乗って同意する時。二回繰り返して言うのが自然。",
     "nuance": "韓国語は同じ語を重ねて相槌の強さを出す。一回だけだと少し素っ気ない。",
-    "is_published": true,
-    "published_at": "2026-08-06T08:03:29.305853+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 6,
@@ -68,8 +68,8 @@
     "meaning": "どうしよう",
     "description": "困った時にも、相手を気遣う時にも出る万能リアクション。",
     "nuance": "日本語は自分の困り事に使うが、韓国語は相手の話に対しても口にする。",
-    "is_published": true,
-    "published_at": "2026-08-15T10:02:07.299603+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 7,
@@ -80,8 +80,8 @@
     "meaning": "もう、ほんと",
     "description": "呆れ・照れ・軽い抗議まで、感情を込めて言う一言。",
     "nuance": "진짜?が確認なのに対しこちらは感情の吐き出し。声のトーンで意味が変わる。",
-    "is_published": true,
-    "published_at": "2026-08-13T09:44:05.184073+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 8,
@@ -92,8 +92,8 @@
     "meaning": "でしょ?",
     "description": "自分の意見に同意を求める時、会話に自然に挟み込む。",
     "nuance": "그렇지の縮約形。「でしょ?」より軽く、押しつけがましさが出ない。",
-    "is_published": true,
-    "published_at": "2026-08-07T08:34:47.095700+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 9,
@@ -104,8 +104,8 @@
     "meaning": "何言ってんの",
     "description": "相手の発言を笑いながら受け流す時。親しい間柄だけで使う。",
     "nuance": "日本語の「何言ってんの」より角が立たず、冗談前提のツッコミとして通る。",
-    "is_published": true,
-    "published_at": "2026-08-11T12:01:23.342391+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 10,
@@ -116,8 +116,8 @@
     "meaning": "もういい",
     "description": "相手の申し出や話を打ち切る時。トーン次第で優しくも冷たくもなる。",
     "nuance": "「結構です」という丁寧な断りにもなり、拒否と拗ねを一語で担う。",
-    "is_published": true,
-    "published_at": "2026-08-18T14:17:49.836090+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 11,
@@ -128,8 +128,8 @@
     "meaning": "ふざけてんの",
     "description": "信じられない話や行動に返すツッコミ。仲の良い友達に限る。",
     "nuance": "日本語の「ふざけんな」ほど攻撃的でなく、驚きのツッコミとして使われる。",
-    "is_published": true,
-    "published_at": "2026-08-06T23:53:04.731942+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 12,
@@ -140,8 +140,8 @@
     "meaning": "ありえない",
     "description": "驚きや否定を強く出す時。悪い話にも嬉しい話にも使う。",
     "nuance": "日本語は否定寄りだが、韓国語は嬉しい驚きにも普通に使えるのが違い。",
-    "is_published": true,
-    "published_at": "2026-08-07T20:24:43.001369+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 13,
@@ -152,8 +152,8 @@
     "meaning": "違うし",
     "description": "相手の決めつけを軽く否定する時。語尾の거든が可愛らしさを出す。",
     "nuance": "「違うし」より柔らかく、拗ねた甘えのニュアンスが混ざる。",
-    "is_published": true,
-    "published_at": "2026-08-07T18:07:55.511246+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 14,
@@ -164,8 +164,8 @@
     "meaning": "自分の心配しなよ",
     "description": "おせっかいな相手に返す一言。仲が良いほど笑って使える。",
     "nuance": "直訳は「お前こそちゃんとやれ」。日本語より直接的だが冗談として成立する。",
-    "is_published": true,
-    "published_at": "2026-08-10T23:20:11.268976+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 15,
@@ -176,8 +176,8 @@
     "meaning": "なんでそれ聞くの",
     "description": "答えが分かりきった質問に返す一言。照れ隠しにもなる。",
     "nuance": "日本語なら「聞かないでよ」と濁す場面を、韓国語は理由を問う形で返す。",
-    "is_published": true,
-    "published_at": "2026-08-17T10:58:56.437327+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 16,
@@ -188,8 +188,8 @@
     "meaning": "それはいいから",
     "description": "前の話を切って本題に戻したい時に挟む一言。",
     "nuance": "됐어より強く話題を断ち切る。日本語の「はいはい、それより」に近い。",
-    "is_published": true,
-    "published_at": "2026-08-12T22:07:25.281904+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 17,
@@ -200,8 +200,8 @@
     "meaning": "イライラする",
     "description": "思い通りにならない時の定番。独り言としてもよく出る。",
     "nuance": "日本語の「イライラ」より口語的で、軽い愚痴として気軽に口にする。",
-    "is_published": true,
-    "published_at": "2026-08-12T05:19:02.511062+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 18,
@@ -212,8 +212,8 @@
     "meaning": "テンション上がる",
     "description": "楽しみなことが決まった時に出る一言。子どもも大人も使う。",
     "nuance": "「楽しい」ではなく、これから始まることへのワクワク感を指す点が違う。",
-    "is_published": true,
-    "published_at": "2026-08-11T08:38:50.577110+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 19,
@@ -224,8 +224,8 @@
     "meaning": "うらやましい",
     "description": "相手のいい話を聞いた時の素直なリアクション。",
     "nuance": "日本語だと妬みに聞こえかねないが、韓国語は褒め言葉として自然に届く。",
-    "is_published": true,
-    "published_at": "2026-08-14T15:27:02.186164+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 20,
@@ -236,8 +236,8 @@
     "meaning": "ときめく",
     "description": "恋にも旅行前にも使える、胸が高鳴る感覚を表す言葉。",
     "nuance": "日本語の「ときめく」より範囲が広く、日常の小さな期待にも普通に使う。",
-    "is_published": true,
-    "published_at": "2026-08-08T09:23:11.917566+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 21,
@@ -248,8 +248,8 @@
     "meaning": "さみしい、ちょっと悲しい",
     "description": "相手の言動に少し傷ついた時、それを柔らかく伝える言葉。",
     "nuance": "怒りではなく期待外れの寂しさ。日本語に一語で対応する言葉がない。",
-    "is_published": true,
-    "published_at": "2026-08-10T14:47:14.306677+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 22,
@@ -260,8 +260,8 @@
     "meaning": "誇らしい、満たされる",
     "description": "やり遂げた後の充足感を表す。自分にも相手にも使える。",
     "nuance": "「誇らしい」より内向きで、胸がいっぱいになる満足感に近い。",
-    "is_published": true,
-    "published_at": "2026-08-12T14:38:30.695254+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 23,
@@ -272,8 +272,8 @@
     "meaning": "めんどくさい",
     "description": "動きたくない時の定番。友達同士の会話で頻出する。",
     "nuance": "意味は日本語と同じだが、甘えた語尾で言うと可愛く響くのが韓国語らしい。",
-    "is_published": true,
-    "published_at": "2026-08-11T15:44:21.150455+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 24,
@@ -284,8 +284,8 @@
     "meaning": "退屈、ひま",
     "description": "やることがない時に。誰かを誘う合図にもなる。",
     "nuance": "単なる退屈ではなく「かまって」の含みがあり、連絡のきっかけに使われる。",
-    "is_published": true,
-    "published_at": "2026-08-07T04:14:46.222058+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 25,
@@ -296,8 +296,8 @@
     "meaning": "アイスアメリカーノください",
     "description": "韓国のカフェで最も多い注文。아이스 아메리카노の略語。",
     "nuance": "日本にも略語文化はあるが、注文でここまで縮めるのは韓国ならでは。",
-    "is_published": true,
-    "published_at": "2026-08-14T12:00:01.235922+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 26,
@@ -308,8 +308,8 @@
     "meaning": "ホットでお願いします",
     "description": "温かい方を選ぶ時の言い方。冷たい方なら차가운 걸로。",
     "nuance": "日本語の「ホットで」に当たるが、韓国語は「温かいもので」と形容詞で言う。",
-    "is_published": true,
-    "published_at": "2026-08-08T04:35:41.310565+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 27,
@@ -320,8 +320,8 @@
     "meaning": "お持ち帰りで",
     "description": "店内かテイクアウトかを聞かれた時の返し。一言で通じる。",
     "nuance": "外来語より포장(包装)を使うのが一般的で、その方が自然に響く。",
-    "is_published": true,
-    "published_at": "2026-08-10T18:12:13.514761+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 28,
@@ -332,8 +332,8 @@
     "meaning": "店内で食べます",
     "description": "店内利用を伝える時。飲み物なら마실게요に変えて使う。",
     "nuance": "日本語は「店内で」と場所だけ言うが、韓国語は動詞まで言い切るのが普通。",
-    "is_published": true,
-    "published_at": "2026-08-13T05:20:10.977864+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 29,
@@ -344,8 +344,8 @@
     "meaning": "氷抜きでお願いします",
     "description": "氷を入れたくない時の定番。少なめなら얼음 조금만。",
     "nuance": "韓国のカフェは氷が多めなので、この一言の出番が日本より圧倒的に多い。",
-    "is_published": true,
-    "published_at": "2026-08-08T11:03:45.712897+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 30,
@@ -356,8 +356,8 @@
     "meaning": "デリバリー頼む?",
     "description": "家で集まった時の誘い文句。韓国の日常に完全に定着した表現。",
     "nuance": "日本語の「出前」より軽く、外食と並ぶ普通の選択肢として口にする。",
-    "is_published": true,
-    "published_at": "2026-08-10T21:07:25.530353+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 31,
@@ -368,8 +368,8 @@
     "meaning": "呼び出しベル鳴ったよ",
     "description": "カフェで注文品ができた合図。友達に知らせる時に使う。",
     "nuance": "日本は番号札が多いが、韓国は진동벨が標準なので専用の言い方がある。",
-    "is_published": true,
-    "published_at": "2026-08-08T07:35:56.411268+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 32,
@@ -380,8 +380,8 @@
     "meaning": "サイズアップしてください",
     "description": "大きいサイズに変更したい時。少額で容量を増やせる店が多い。",
     "nuance": "英語をそのまま動詞化する韓国語らしい表現。日本語では言い換えが要る。",
-    "is_published": true,
-    "published_at": "2026-08-12T18:39:36.473278+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 33,
@@ -392,8 +392,8 @@
     "meaning": "何してる?",
     "description": "友達に送る最も基本のメッセージ。会話の入り口になる。",
     "nuance": "意味は日本語と同じだが、韓国では用がなくても送る挨拶に近い使われ方をする。",
-    "is_published": true,
-    "published_at": "2026-08-08T00:03:03.979694+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 34,
@@ -404,8 +404,8 @@
     "meaning": "ご飯食べた?",
     "description": "안부(安否)を尋ねる定番。時間帯を問わず使える。",
     "nuance": "食事の確認ではなく「元気?」に近い挨拶。韓国的な思いやりの表し方。",
-    "is_published": true,
-    "published_at": "2026-08-06T23:52:47.634787+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 35,
@@ -416,8 +416,8 @@
     "meaning": "今どこ?",
     "description": "待ち合わせや連絡時の一言。야の語尾がタメ口の目印。",
     "nuance": "日本語は「今」をつけないと落ち着かないが、韓国語は一語で足りる。",
-    "is_published": true,
-    "published_at": "2026-08-11T04:44:24.340711+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 36,
@@ -428,8 +428,8 @@
     "meaning": "今から行く",
     "description": "出発を知らせる時。지금 갈게と言えば約束の色が強まる。",
     "nuance": "韓国語の가は向かう動きを含み、日本語の「行く」より進行中の感覚が強い。",
-    "is_published": true,
-    "published_at": "2026-08-07T11:30:49.004960+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 37,
@@ -440,8 +440,8 @@
     "meaning": "また後でね",
     "description": "その日のうちにまた会う相手への別れの挨拶。",
     "nuance": "「また後で」に当たるが、韓国語は同日中という時間感覚がはっきりしている。",
-    "is_published": true,
-    "published_at": "2026-08-12T09:44:11.656927+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 38,
@@ -452,8 +452,8 @@
     "meaning": "おやすみ",
     "description": "夜の別れの挨拶。直訳は「よく寝て」。",
     "nuance": "日本語の「おやすみ」より相手を気遣う響きがあり、恋人同士でも定番。",
-    "is_published": true,
-    "published_at": "2026-08-17T14:04:00.709443+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 39,
@@ -464,8 +464,8 @@
     "meaning": "ありがとう",
     "description": "友達へのお礼。目上には감사합니다を使う。",
     "nuance": "感謝の言い方が相手との距離ではっきり分かれるのが日本語との大きな違い。",
-    "is_published": true,
-    "published_at": "2026-08-07T22:19:33.172151+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 40,
@@ -476,8 +476,8 @@
     "meaning": "ごめん",
     "description": "軽い謝罪。미안해より短く、友達同士で最もよく使う形。",
     "nuance": "軽さは日本語と同じ。丁寧に謝る時は죄송합니다と語そのものが入れ替わる。",
-    "is_published": true,
-    "published_at": "2026-08-06T12:22:26.415803+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 41,
@@ -488,8 +488,8 @@
     "meaning": "それな、認める",
     "description": "相手の意見に同意する時のネットスラング。ㅇㅈと略される。",
     "nuance": "日本語の「それな」に近いが、認めるという判断のニュアンスが残る。",
-    "is_published": true,
-    "published_at": "2026-08-10T10:46:06.996179+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 42,
@@ -500,8 +500,8 @@
     "meaning": "推し",
     "description": "一番好きなメンバーや作品を指す言葉。ファン同士の会話で必須。",
     "nuance": "日本語の「推し」に対応する。漢字で最愛と書くと意味を掴みやすい。",
-    "is_published": true,
-    "published_at": "2026-08-07T14:41:53.654082+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 43,
@@ -513,7 +513,7 @@
     "description": "早起きや運動など、真面目に頑張る暮らしぶりを指す。",
     "nuance": "英語のgodと생(生)の合成語。日本語に一語の訳がなく説明が要る。",
     "is_published": true,
-    "published_at": "2026-08-07T04:40:24.095795+00:00"
+    "published_at": "2026-08-20T11:00:24.154670+00:00"
   },
   {
     "id": 44,
@@ -524,8 +524,8 @@
     "meaning": "頑張ってない風のおしゃれ",
     "description": "꾸민 듯 안 꾸민 듯の略。自然に見えて実は計算された装い。",
     "nuance": "日本語の「抜け感」に近い。文をまるごと四文字に圧縮するのが韓国語らしい。",
-    "is_published": true,
-    "published_at": "2026-08-11T20:03:20.945988+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 45,
@@ -536,8 +536,8 @@
     "meaning": "小さいけど確かな幸せ",
     "description": "日常のささやかな幸せを指す言葉。SNSの投稿タグでよく見る。",
     "nuance": "日本語の「小確幸」が韓国で定着した語。今は韓国での使用頻度の方が高い。",
-    "is_published": true,
-    "published_at": "2026-08-18T10:57:08.404148+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 46,
@@ -548,8 +548,8 @@
     "meaning": "相性、息の合い方",
     "description": "人と人の相性を指す。ケミストリーの略。",
     "nuance": "日本語の「相性」より軽く、組み合わせの面白さを褒める時に使う。",
-    "is_published": true,
-    "published_at": "2026-08-19T14:18:33.491060+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 47,
@@ -560,8 +560,8 @@
     "meaning": "胸キュン",
     "description": "心臓が跳ねるほどときめいた瞬間を表す。심장 쿵の略。",
     "nuance": "日本語の「胸キュン」と発想がそっくりで、語の作られ方までよく似ている。",
-    "is_published": true,
-    "published_at": "2026-08-06T06:00:40.291200+00:00"
+    "is_published": false,
+    "published_at": null
   },
   {
     "id": 48,
@@ -572,7 +572,7 @@
     "meaning": "食べる配信",
     "description": "먹는 방송の略。今や世界共通語になった韓国発の言葉。",
     "nuance": "日本語に定着した数少ない韓国語で、モッパンとしてそのまま通じる。",
-    "is_published": true,
-    "published_at": "2026-08-19T10:55:59.799544+00:00"
+    "is_published": false,
+    "published_at": null
   }
 ]
