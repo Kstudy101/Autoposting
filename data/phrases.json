@@ -368,8 +368,8 @@
     "meaning": "呼び出しベル鳴ったよ",
     "description": "カフェで注文品ができた合図。友達に知らせる時に使う。",
     "nuance": "日本は番号札が多いが、韓国は진동벨が標準なので専用の言い方がある。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-22T10:44:09.491013+00:00"
   },
   {
     "id": 32,
