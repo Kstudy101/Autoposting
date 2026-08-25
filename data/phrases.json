@@ -392,8 +392,8 @@
     "meaning": "何してる?",
     "description": "友達に送る最も基本のメッセージ。会話の入り口になる。",
     "nuance": "意味は日本語と同じだが、韓国では用がなくても送る挨拶に近い使われ方をする。",
-    "is_published": false,
-    "published_at": null
+    "is_published": true,
+    "published_at": "2026-08-25T11:02:27.381013+00:00"
   },
   {
     "id": 34,
